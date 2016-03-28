@@ -81,10 +81,11 @@ $(document).ready(function(){
       reset(boxArray, playerTurn);
       playerTurn = 1;
     }
-    alert(playerCount);
+
+
+    // one player
 
     if(playerCount === 1) {
-
       var currentMark = null;
       if(playerTurn % 2 === 0) {
         currentMark = "o";
@@ -94,8 +95,9 @@ $(document).ready(function(){
         $("#playerTurn").text("X");
       }
 
-      for(i = 1; i > 0; i++) {
-        var randomNumber = Math.floor((Math.random() * 8));
+      var availableTargets = []
+      for(i = 9; i >= 0; i--) {
+        var randomNumber = Math.floor((Math.random() * (i - 1)));
         if (boxArray[randomNumber].mark === null) {
           playerTurn += 1;
           var target = "#" + randomNumber;
