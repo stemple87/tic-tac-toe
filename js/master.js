@@ -83,29 +83,44 @@ $(document).ready(function(){
     }
 
 
-    // one player
-
-    if(playerCount === 1) {
-      var currentMark = null;
-      if(playerTurn % 2 === 0) {
-        currentMark = "o";
-        $("#playerTurn").text("O");
-      } else {
-        currentMark = "x";
-        $("#playerTurn").text("X");
-      }
-
-      var availableTargets = []
-      for(i = 9; i >= 0; i--) {
-        var randomNumber = Math.floor((Math.random() * (i - 1)));
-        if (boxArray[randomNumber].mark === null) {
-          playerTurn += 1;
-          var target = "#" + randomNumber;
-          $(target).text(currentMark);
-          boxArray[event.target.id].mark = currentMark;
-          break;
-        }
-      }
+    // // one player
+    //
+    // if(playerCount === 1) {
+    //   var currentMark = null;
+    //   if(playerTurn % 2 === 0) {
+    //     currentMark = "o";
+    //     $("#playerTurn").text("O");
+    //   } else {
+    //     currentMark = "x";
+    //     $("#playerTurn").text("X");
+    //   }
+    //
+    //   var randomNumber = function(maxNumber) {
+    //     var rand = Math.floor(Math.random() * maxNumber)
+    //     return rand;
+    //   }
+    //   var availableTargets = []
+    //   for(i = 0; i < 9; i++) {
+    //     // var randomNumber = Math.floor((Math.random() * (i - 1)));
+    //     if(boxArray[i].mark === null) {
+    //       console.log(boxArray[i])
+    //       availableTargets[i] = boxArray[i].mark;
+    //       console.log(availableTargets[i]);
+    //       var numberOfTargets = availableTargets.length;
+    //       console.log(numberOfTargets);
+    //       for (var j = 0; j < numberOfTargets; j++) {
+    //         var randomTargets = randomNumber(numberOfTargets)
+    //         var target = "#" + availableTargets[randomNumber(numberOfTargets)];
+    //         $(target).text(currentMark);
+    //         boxArray[event.target.id].mark = currentMark;
+    //       }
+    //       playerTurn += 1;
+    //       // var target = "#" + randomNumber;
+    //       // $(target).text(currentMark);
+    //       // boxArray[event.target.id].mark = currentMark;
+    //       // break;
+    //     }
+    //   }
     }
   });
 });
