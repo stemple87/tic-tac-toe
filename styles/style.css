@@ -1,0 +1,20 @@
+#gameArea {
+  width: 366px;
+  height: 366px;
+
+}
+
+.box {
+  border: 1px solid black;
+  background-color: red;
+  width: 120px;
+  height: 120px;
+  float: left;
+  text-align: center;
+  font-size: 100px;
+  /*padding-top: 20px*/
+  /*border: 1px solid black*/
+}
+#gameArea {
+  display: none;
+}
