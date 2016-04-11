@@ -18,7 +18,7 @@ _You can contact me at simonctemple@live.com or at my github profile https://git
 
 ## Technologies Used
 
-_This app is made using Ember and Node.js_
+_This app is made using html, javascript, jQuery_
 
 ### License
 
